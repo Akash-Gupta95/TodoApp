@@ -5,7 +5,8 @@
   "main": "TaskModel.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node Server.js"
+    "start":"node Server.js",
+    "build":"npm run build"
   },
   "author": "",
   "license": "ISC"
