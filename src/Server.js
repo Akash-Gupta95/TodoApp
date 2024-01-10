@@ -3,9 +3,9 @@ const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
 const mongoose = require("mongoose");
-//cors
-// const cors = require('cors');
-// app.use(cors());
+// cors
+const cors = require('cors');
+app.use(cors());
 
 //body-pars
 const bodyParser = require('body-parser')
