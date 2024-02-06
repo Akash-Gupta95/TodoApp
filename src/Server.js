@@ -50,6 +50,29 @@ app.post('/post', async(req,res)=>{
 
 
 
+// Put 
+
+app.put('/update/:id', async(req,res)=>{
+     const {id}= req.params;
+    const {task , des} = req.body;
+
+    try{
+        const update = taskModel.findByIdAndUpdate({_id:id}, {
+            task:task,
+            des:des,
+            headers:{
+                "Content-Type": "application/json"
+            }
+        })
+       
+        res.status(201).json(update);
+
+    }catch(error){
+        res.status(400).json({error:error.message})
+    }
+})
+
+
 // get
 app.get('/get', async(req,res)=>{
 const allTask = await taskModel.find();
